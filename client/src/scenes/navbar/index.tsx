@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { SelectedContext } from '@/context/NavbarContext';
 import { Link } from "react-router-dom";
 import { Box, Typography, useTheme } from "@mui/material";
 import FlexBetween from "@/components/FlexBetween";
 import Logo from '@/assets/logo512.jpeg';
+import { useContext } from 'react';
 
 type Props = {}
 
 const Navbar = (props: Props) => {
 	const { palette } = useTheme();
-	const [selected, setSelected] = useState("main-menu");
+	const { selected, setSelected } = useContext(SelectedContext);
 
 	return (
 		<FlexBetween mb="0.25rem" p="0.5rem 0" color={palette.grey[300]}>
