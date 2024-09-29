@@ -6,6 +6,7 @@ import { Box, CssBaseline } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./scenes/navbar";
 import MainMenu from "./scenes/main-menu";
+import Game from "./scenes/game";
 import { SelectedContextProvider } from '@/context/NavbarContext';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
               <Navbar />
               <Routes>
                 <Route path="/" element={<MainMenu />} />
-                <Route path="/game" element={<>Game</>} />
+                <Route path="/game" element={<Game />} />
               </Routes>
             </Box>
           </ThemeProvider>
